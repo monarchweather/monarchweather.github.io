@@ -9,10 +9,10 @@
     <div class="mypanel"></div>
 
     <script>
-    $.getJSON('https://api.weather.gov/alerts?active=false&status=actual&message_type=alert,update,cancel&point=35.8644%2C-120.8029&urgency=future,expected,immediate', function(data) {
-        
-        var text = `Title: ${data.title}<br>
-                    Updated: ${data.updated}`
+    $.getJSON('https://api.weather.gov/alerts?active=false&status=actual&message_type=alert,update,cancel&point=44.29%2C-92.67&urgency=future,expected,immediate', function(data) {
+
+        var text = `<font color="#b3b6ba">${data.title}<br>
+                    Updated: ${data.updated} </font>`
 
 
         $(".mypanel").html(text);
