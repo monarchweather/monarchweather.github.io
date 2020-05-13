@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="mypanel"></div>
+
+    <script>
+    $.getJSON('https://api.weather.gov/alerts?active=false&status=actual&message_type=alert,update,cancel&point=35.8644%2C-120.8029&urgency=future,expected,immediate', function(data) {
+        
+        var text = `Title: ${data.title}<br>
+                    Updated: ${data.updated}`
+
+
+        $(".mypanel").html(text);
+    });
+    </script>
+
+</body>
+</html>
